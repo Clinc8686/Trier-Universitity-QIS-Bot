@@ -86,7 +86,7 @@ if now.hour >= 1 and not now.hour <= 5:
         elif x.find("BE") != -1 or x.find("NB") != -1:  #Schaue ob BEstandener oder NichtBestander Eintrag
             if now.month >= 10 or now.month <= 4:   #Haben wir Oktober-April?
                 if now.month >= 10 and now.month <= 12:
-                    semester = "WiSe " + str(now.year)[len(str(now.year))//2:]+"/"+(int(str(now.year)[len(str(now.year))//2:])+1)   #Dann "WiSe Neues Jahr/Altes Jahr"
+                    semester = "WiSe " + str(now.year)[len(str(now.year))//2:]+"/"+(int(str(now.year)[len(str(now.year))//2:])+1)   #Dann "WiSe Altes Jahr/Neues Jahr"
                 else:
                     semester = "WiSe " + str(now.year)[len(str(now.year)) // 2:] + "/" + (int(str(now.year)[len(str(now.year)) // 2:]) - 1)  # Dann "WiSe Neues Jahr/Altes Jahr"
             else:
