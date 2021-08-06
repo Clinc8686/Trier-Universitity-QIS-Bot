@@ -9,4 +9,3 @@ requests<br/>
 re<br/>
 os.path<br/>
 <br/>
-You also need to create a file named "Klausur_log.txt" in the same directory. 
