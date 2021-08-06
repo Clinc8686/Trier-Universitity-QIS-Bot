@@ -13,3 +13,5 @@ os.path<br/>
 Run the start.py script in crontab on linux. Or you can run the start_looped.py script, which only have to started once.
 For Windows is start_looped_windows.pyw recommended. It will change the registry to run every startup automatically.
 But you need for the Windwos version further the Package winreg.
+
+How to create a Discord-Webhook? -> https://youtu.be/6t3UyMJYeso
