@@ -108,11 +108,12 @@ def main():
             elif modul.find("BE") != -1 or modul.find("NB") != -1:  #Schaue ob BEstandener oder NichtBestander Eintrag
                 if now.month >= 10 or now.month <= 4:   #Haben wir Oktober-April?
                     if now.month >= 10 and now.month <= 12:
-                        semester = "WiSe " + str(now.year)[len(str(now.year))//2:]+"/"+(int(str(now.year)[len(str(now.year))//2:]) + 1)   #Dann "WiSe Altes Jahr/Neues Jahr"
+                        semester = "WiSe " + str(now.year)[len(str(now.year))//2:]+"/"+str(int(str(now.year)[len(str(now.year))//2:])+1)   #Dann "WiSe Altes Jahr/Neues Jahr"
                     else:
-                        semester = "WiSe " + str(now.year)[len(str(now.year)) // 2:] + "/" + (int(str(now.year)[len(str(now.year)) // 2:]) - 1)  # Dann "WiSe Neues Jahr/Altes Jahr"
+                        semester = "WiSe " + str(now.year)[len(str(now.year))//2:]+"/"+str(int(str(now.year)[len(str(now.year))//2:])-1)   #Dann "WiSe Neues Jahr/Altes Jahr"
                 else:
                     semester = "SoSe " + str(now.year)[len(str(now.year))//2:]  #Dann nicht, "SoSe Aktuelles Jahr"
+
                 if any(y in modul for y in modulnumbers) and modul.find(semester) != -1:    #Finde aktuelles Semesterjahr in Modulübersicht
                     if os.path.isfile(filepath+"\Klausur_log.txt") == False:    #Prüfe ob Datei zur speicherung der Prüfungen existiert
                         f = open(filepath+"\Klausur_log.txt", "w")         #Wenn nicht, erstelle Datei
